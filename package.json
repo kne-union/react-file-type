@@ -7,11 +7,13 @@
   "source": "src/index.js",
   "scripts": {
     "createIcon": "node scripts/createIcon.js",
-    "init": "npm install && cd example && npm install",
-    "start": "run-p start:lib start:example",
-    "build": "run-s build:lib build:example",
+    "init": "cd example && npm i --legacy-peer-deps && node scripts/init.js",
+    "start": "run-p start:lib start:md start:example",
+    "build": "run-s build:lib build:md build:example",
     "build:lib": "microbundle --no-compress --format modern,cjs --jsx React.createElement --jsxFragment React.Fragment",
     "start:lib": "microbundle watch --no-compress --format modern,cjs --jsx React.createElement --jsxFragment React.Fragment",
+    "build:md": "create-md",
+    "start:md": "create-md --watch",
     "test": "run-s test:unit test:lint test:build",
     "test:build": "run-s build",
     "test:lint": "eslint .",
@@ -50,7 +52,14 @@
     "prop-types": ">=15.x",
     "react": ">=16.x"
   },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
+  },
   "devDependencies": {
+    "@kne/md-doc": "^0.1.2",
+    "@kne/microbundle": "^0.15.2",
     "@svgr/core": "^6.2.1",
     "cross-env": "^7.0.3",
     "fs-extra": "^10.0.1",
@@ -58,9 +67,6 @@
     "husky": "^7.0.4",
     "microbundle": "^0.14.2",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.5.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "^5.0.0"
+    "prettier": "^2.5.1"
   }
 }

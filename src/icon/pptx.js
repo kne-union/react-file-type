@@ -1,0 +1,5 @@
+import * as React from "react";
+
+const PptxIcon = props => <svg t={1646123861524} className="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" p-id={991} xmlnsXlink="http://www.w3.org/1999/xlink" width="1em" height="1em" {...props}><defs><style type="text/css" /></defs><path d="M704 0H192a64 64 0 0 0-64 64v320h576a64 64 0 0 1 64 64v416a64 64 0 0 1-64 64H128v32a64 64 0 0 0 64 64h768a64 64 0 0 0 64-64V320z" fill="#EAEAEA" p-id={992} /><path d="M704 0v256a64 64 0 0 0 64 64h256z" fill="#434854" p-id={993} /><path d="M768 320l256 256V320H768z" opacity={0.1} p-id={994} /><path d="M704 832a32 32 0 0 1-32 32H32a32 32 0 0 1-32-32V480a32 32 0 0 1 32-32h640a32 32 0 0 1 32 32z" fill="#F05264" p-id={995} /><path d="M192 544h-48a16 16 0 0 0-16 16v192a16 16 0 0 0 32 0v-80h32a64 64 0 0 0 0-128z m0 96h-32v-64h32a32 32 0 0 1 0 64z m160-96h-48a16 16 0 0 0-16 16v192a16 16 0 0 0 32 0v-80h32a64 64 0 0 0 0-128z m0 96h-32v-64h32a32 32 0 0 1 0 64z m240-96H464a16 16 0 0 0 0 32h48v176a16 16 0 0 0 32 0V576h48a16 16 0 0 0 0-32z" fill="#FFFFFF" p-id={996} /></svg>;
+
+export default PptxIcon;
