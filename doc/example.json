@@ -5,14 +5,16 @@
       "title": "基本：",
       "description": "支持14种文件格式，如：doc | docx | gif | jpg | mp4 | pdf | png | ppt | pptx | rar | svg | xls | xlsx | zip",
       "code": "./base.js",
-      "scope": [{
-        "name": "FileType",
-        "packageName": "@kne/react-file-type"
-      }],
-      "__scope_notes": {
-        "name": "这里填写包导出名称(这是一个注释字段，需要添加到[scope]中)",
-        "packageName": "这里填写包名(这是一个注释字段，需要添加到[scope]中)"
-      }
+      "scope": [
+        {
+          "name": "fileType",
+          "packageName": "@kne/react-file-type"
+        },
+        {
+          "name": "space",
+          "packageName": "antd/lib/space"
+        }
+      ]
     }
   ]
 }

@@ -14,7 +14,9 @@ const createJsTemplate = async (readme) => {
             if (!mapping[packageName]) {
                 const key = uniqueId('component_');
                 importList.push(name ? `import * as ${key} from '${packageName}';` : `import '${packageName}';`);
-                mapping[packageName] = key;
+                if (name) {
+                    mapping[packageName] = key;
+                }
             }
 
 
@@ -33,13 +35,13 @@ const createJsTemplate = async (readme) => {
         if (splitList[0].indexOf('@') === 0) {
             packageName = splitList[0] + '/' + splitList[1];
         }
-        if (!await fs.exists(`./node_modules/${name}`)) {
-            console.log(`>>>>>开始自动安装包${name}>>>>>>`);
-            await spawn('npm', ['i', name, '--save'], {stdio: 'inherit'}).then(() => {
-                console.log(`<<<<<<<<<<包${name}安装完成<<<<<<<<`);
+        if (!await fs.exists(`./node_modules/${packageName}`)) {
+            console.log(`>>>>>开始自动安装包${packageName}>>>>>>`);
+            await spawn('npm', ['i', packageName, '--save'], {stdio: 'inherit'}).then(() => {
+                console.log(`<<<<<<<<<<包${packageName}安装完成<<<<<<<<`);
             }, (e) => {
                 console.log(e);
-                console.log(`-------包${name}自动安装失败-------`);
+                console.log(`-------包${packageName}自动安装失败-------`);
             });
         }
     }
@@ -58,12 +60,12 @@ const readmeConfig = {
         return `{
     title: \`${item.title}\`,
     description: \`${item.description}\`,
-    code: \`${item.code}\`,
-    scope: [${(item.scope || []).filter(({name}) => !!name).map(({name, packageName}) => {
+    code: \`${(item.code || '').replace(/\$/g, '\\$').replace(/`/g, '\\`')}\`,
+    scope: [${(item.scope || []).map(({name, packageName}) => {
             return `{
     name: "${name}",
     packageName: "${packageName}",
-    component: ${mapping[packageName]}
+    component: ${mapping[packageName] ? mapping[packageName] : null}
 }`
         }).join(',')}]
 }`

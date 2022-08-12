@@ -1,4 +1,5 @@
-import * as component_25 from '@kne/react-file-type';
+import * as component_3 from '@kne/react-file-type';
+import * as component_4 from 'antd/lib/space';
 const readmeConfig = {
     name: `@kne/react-file-type`,
     description: `显示文件类型图标`,
@@ -19,6 +20,12 @@ const readmeConfig = {
 <td>doc | docx | gif | jpg | mp4 | pdf | png | ppt | pptx | rar | svg | xls | xlsx | zip</td>
 <td>unknow</td>
 </tr>
+<tr>
+<td>size</td>
+<td>图标大小</td>
+<td>number</td>
+<td>40</td>
+</tr>
 </tbody>
 </table>`,
     example: {
@@ -28,32 +35,57 @@ const readmeConfig = {
         list: [{
     title: `基本：`,
     description: `支持14种文件格式，如：doc | docx | gif | jpg | mp4 | pdf | png | ppt | pptx | rar | svg | xls | xlsx | zip`,
-    code: `
+    code: `const {default: FileType} = fileType;
+const {default: Space} = space;
 const BaseExample = () => {
-    return <div>
+    return <Space direction="vertical">
         <div>
             加载PDF文件：
         </div>
-        <div>
-            <FileType type="pdf" />
-        </div>
+        <Space>
+            <FileType type="doc"/>
+            <FileType type="docx"/>
+            <FileType type="gif"/>
+            <FileType type="jpg"/>
+            <FileType type="mp4"/>
+            <FileType type="pdf"/>
+            <FileType type="png"/>
+            <FileType type="ppt"/>
+            <FileType type="pptx"/>
+            <FileType type="rar"/>
+            <FileType type="svg"/>
+            <FileType type="xls"/>
+            <FileType type="xlsx"/>
+            <FileType type="zip"/>
+        </Space>
+        <Space direction="vertical">
+            <div>自定义尺寸:</div>
+            <Space>
+                <FileType type="doc" size={30}/>
+                <FileType type="doc" size={40}/>
+                <FileType type="doc" size={50}/>
+            </Space>
+        </Space>
         <div>
             不支持的文件格式显示如下：
-
         </div>
         <div>
-            <FileType type="msg" />
+            <FileType type="msg"/>
         </div>
-    </div>;
+    </Space>;
 };
 
-render(<BaseExample />);
+render(<BaseExample/>);
 
 `,
     scope: [{
-    name: "FileType",
+    name: "fileType",
     packageName: "@kne/react-file-type",
-    component: component_25
+    component: component_3
+},{
+    name: "space",
+    packageName: "antd/lib/space",
+    component: component_4
 }]
 }]
     }

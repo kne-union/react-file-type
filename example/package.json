@@ -9,14 +9,15 @@
     "test": "craco test"
   },
   "dependencies": {
-    "@kne/react-file-type": "file:..",
     "@kne/example-driver": "^0.1.0",
+    "@kne/react-file-type": "file:..",
+    "antd": "^4.22.3",
     "react": "file:../node_modules/react",
     "react-dom": "file:../node_modules/react-dom"
   },
   "devDependencies": {
     "@craco/craco": "^6.4.5",
-    "@kne/md-doc": "^0.1.2",
+    "@kne/md-doc": "^0.1.6",
     "chokidar": "^3.5.3",
     "cross-spawn-promise": "^0.10.2",
     "fs-extra": "^10.1.0",
