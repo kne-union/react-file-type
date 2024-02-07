@@ -9,9 +9,9 @@
   "module": "dist/index.modern.js",
   "source": "src/index.js",
   "scripts": {
+    "init-example": "modules-dev-libs-init",
     "createIcon": "node scripts/createIcon.js",
-    "init": "cd example && npm i --legacy-peer-deps && node scripts/init.js",
-    "start": "run-p start:lib start:md start:example",
+    "start": "run-p start:lib start:example",
     "build": "run-s build:lib build:md build:example",
     "build:lib": "microbundle --no-compress --format modern,cjs --jsx React.createElement --jsxFragment React.Fragment",
     "start:lib": "microbundle watch --no-compress --format modern,cjs --jsx React.createElement --jsxFragment React.Fragment",
@@ -53,23 +53,18 @@
   "homepage": "https://github.com/kne-union/react-clamp#readme",
   "peerDependencies": {
     "prop-types": ">=15.x",
-    "react": ">=16.x"
-  },
-  "dependencies": {
     "react": ">=16.x",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@kne/md-doc": "^0.1.6",
     "@kne/microbundle": "^0.15.2",
+    "@kne/modules-dev": "^2.0.6-alpha.0",
     "@svgr/core": "^6.2.1",
     "cross-env": "^7.0.3",
     "fs-extra": "^10.0.1",
     "gh-pages": "^3.2.3",
     "husky": "^7.0.4",
-    "microbundle": "^0.14.2",
-    "node-sass": "^7.0.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.5.1"
   }
