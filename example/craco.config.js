@@ -1,6 +1,8 @@
 const {CracoLibsExamplePlugin, env} = require('@kne/modules-dev');
 const aliasConfig = require('./webstorm.webpack.config');
 
+process.env.CI = false;
+
 module.exports = {
     webpack: {
         alias: aliasConfig.resolve.alias, configure: (webpackConfig) => {
@@ -11,8 +13,11 @@ module.exports = {
     }, plugins: [{
         plugin: CracoLibsExamplePlugin, options: {
             middleware: (moduleFederationConfig) => {
-                const shared = Object.assign({}, moduleFederationConfig.shared);
-                delete shared["@kne/react-file-type"];
+                const shared = Object.assign({}, moduleFederationConfig.shared,{
+                    '@kne/current-lib_react-file-type': {
+                        singleton: true, requiredVersion: false
+                    }
+                });
                 return Object.assign({}, moduleFederationConfig, {
                     exposes: {
                         './components': env.manifestPath

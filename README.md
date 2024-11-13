@@ -24,7 +24,7 @@ npm i --save @kne/react-file-type
 
 - 基本：
 - 支持14种文件格式，如：doc | docx | gif | jpg | mp4 | pdf | png | ppt | pptx | rar | svg | xls | xlsx | zip
-- fileType(@kne/react-file-type),space(antd/lib/space)
+- fileType(@kne/current-lib_react-file-type),space(antd/lib/space)
 
 ```jsx
 const {default: FileType} = fileType;
