@@ -8,7 +8,7 @@
       "scope": [
         {
           "name": "fileType",
-          "packageName": "@kne/react-file-type"
+          "packageName": "@kne/current-lib_react-file-type"
         },
         {
           "name": "space",
