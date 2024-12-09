@@ -1,6 +1,6 @@
 {
   "name": "@kne/react-file-type",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "显示文件类型图标",
   "syntax": {
     "esmodules": true
@@ -54,7 +54,7 @@
   "peerDependencies": {
     "prop-types": ">=15.x",
     "react": ">=16.x",
-    "react-dom": "^18.2.0"
+    "react-dom": ">=16.x"
   },
   "devDependencies": {
     "@kne/md-doc": "^0.1.6",
