@@ -1,0 +1,5 @@
+import * as React from "react";
+
+const MdIcon = props => <svg t={1646123900000} className="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" p-id={9001} xmlnsXlink="http://www.w3.org/1999/xlink" width="1em" height="1em" {...props}><path d="M704 0H192a64 64 0 0 0-64 64v320h576a64 64 0 0 1 64 64v416a64 64 0 0 1-64 64H128v32a64 64 0 0 0 64 64h768a64 64 0 0 0 64-64V320z" fill="#EAEAEA" p-id={9002} /><path d="M704 0v256a64 64 0 0 0 64 64h256z" fill="#434854" p-id={9003} /><path d="M768 320l256 256V320H768z" opacity={0.1} p-id={9004} /><path d="M704 832a32 32 0 0 1-32 32H32a32 32 0 0 1-32-32V480a32 32 0 0 1 32-32h640a32 32 0 0 1 32 32z" fill="#000000" p-id={9005} /><text x={352} y={700} fontSize={240} fontWeight="bold" fill="#FFFFFF" fontFamily="Arial, sans-serif" textAnchor="middle" dominantBaseline="middle">{"MD"}</text></svg>;
+
+export default MdIcon;

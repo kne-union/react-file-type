@@ -1,11 +1,11 @@
 import { HashRouter } from "react-router-dom";
-import createEntry from "@kne/modules-dev/dist/create-entry";
+import createEntry from "@kne/modules-dev/dist/create-entry.modern";
 import "@kne/modules-dev/dist/create-entry.css";
 import readme from "readme";
 
 const ExampleRoutes = createEntry.ExampleRoutes;
 
-const App = ({ preset, themeToken, ...props }) => {
+const App = ({ globalPreset, ...props }) => {
   return (
       <HashRouter>
         <ExampleRoutes
@@ -17,8 +17,8 @@ const App = ({ preset, themeToken, ...props }) => {
                 title: "首页",
               },
             ]}
-            preset={preset}
-            themeToken={themeToken}
+            preset={globalPreset}
+            themeToken={globalPreset.themeToken}
             readme={readme}
             pageProps={{ menu: null }}
         />

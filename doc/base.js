@@ -20,6 +20,9 @@ const BaseExample = () => {
             <FileType type="xls"/>
             <FileType type="xlsx"/>
             <FileType type="zip"/>
+            <FileType type="md"/>
+            <FileType type="txt"/>
+            <FileType type="html"/>
         </Space>
         <Space direction="vertical">
             <div>自定义尺寸:</div>
