@@ -2,8 +2,8 @@
   "isFull": false,
   "list": [
     {
-      "title": "基本：",
-      "description": "支持14种文件格式，如：doc | docx | gif | jpg | mp4 | pdf | png | ppt | pptx | rar | svg | xls | xlsx | zip",
+      "title": "基本用法",
+      "description": "支持18种文件格式，包括：doc | docx | gif | html | jpg | md | mp4 | pdf | png | ppt | pptx | rar | svg | txt | xls | xlsx | zip",
       "code": "./base.js",
       "scope": [
         {
