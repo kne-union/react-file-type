@@ -4,6 +4,7 @@ import GifIcon from './gif';
 import HtmlIcon from './html';
 import JpgIcon from './jpg';
 import MdIcon from './md';
+import Mp3Icon from './mp3';
 import Mp4Icon from './mp4';
 import PdfIcon from './pdf';
 import PngIcon from './png';
@@ -24,6 +25,7 @@ export default {
   "html":HtmlIcon,
   "jpg":JpgIcon,
   "md":MdIcon,
+  "mp3":Mp3Icon,
   "mp4":Mp4Icon,
   "pdf":PdfIcon,
   "png":PngIcon,

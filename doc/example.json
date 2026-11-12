@@ -3,7 +3,7 @@
   "list": [
     {
       "title": "基本用法",
-      "description": "支持18种文件格式，包括：doc | docx | gif | html | jpg | md | mp4 | pdf | png | ppt | pptx | rar | svg | txt | xls | xlsx | zip",
+      "description": "支持19种文件格式，包括：doc | docx | gif | html | jpg | md | mp3 | mp4 | pdf | png | ppt | pptx | rar | svg | txt | xls | xlsx | zip",
       "code": "./base.js",
       "scope": [
         {

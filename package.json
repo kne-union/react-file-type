@@ -1,6 +1,6 @@
 {
   "name": "@kne/react-file-type",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "显示文件类型图标",
   "syntax": {
     "esmodules": true
