@@ -12,6 +12,7 @@ const BaseExample = () => {
           <FileType type="html" />
           <FileType type="jpg" />
           <FileType type="md" />
+          <FileType type="mp3" />
           <FileType type="mp4" />
           <FileType type="pdf" />
           <FileType type="png" />
@@ -23,6 +24,17 @@ const BaseExample = () => {
           <FileType type="xls" />
           <FileType type="xlsx" />
           <FileType type="zip" />
+        </Space>
+      </div>
+      <div>
+        <div style={{ marginBottom: 12, fontWeight: 'bold' }}>音频格式（共用音频图标）：</div>
+        <Space wrap>
+          <FileType type="mp3" />
+          <FileType type="wav" />
+          <FileType type="m4a" />
+          <FileType type="aac" />
+          <FileType type="flac" />
+          <FileType type="MP3" />
         </Space>
       </div>
       <div>
